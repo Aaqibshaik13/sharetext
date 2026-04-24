@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShareText | Share text online instantly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__content">
+        <a href="#" class="logo" aria-label="ShareText home">
+          <span class="logo__dot"></span>
+          ShareText
+        </a>
+        <nav class="nav">
+          <a href="#editor">Editor</a>
+          <a href="#how-to-use">How to use</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="button button--ghost" href="#editor">Start Sharing</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div>
+            <p class="badge">Built for fast teams & creators</p>
+            <h1>Share text online with a clean, business-ready workspace.</h1>
+            <p class="hero__description">
+              Write, copy, and share text instantly with a premium UI inspired by modern product pages and the Google color theme.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="#editor">Create Share Link</a>
+              <a class="button button--secondary" href="#how-to-use">Learn More</a>
+            </div>
+            <ul class="hero__stats" aria-label="Platform stats">
+              <li><strong>2s</strong><span>Average setup time</span></li>
+              <li><strong>99.9%</strong><span>Availability target</span></li>
+              <li><strong>1 click</strong><span>Copy & share flow</span></li>
+            </ul>
+          </div>
+
+          <div class="card card--highlight" id="editor">
+            <h2>Quick Share Editor</h2>
+            <p>Type your message and generate a shareable preview link.</p>
+            <label for="text-input" class="sr-only">Text to share</label>
+            <textarea id="text-input" placeholder="Write the text you want to share..."></textarea>
+            <div class="actions">
+              <button id="copy-btn" class="button" type="button">Copy Text</button>
+              <button id="generate-btn" class="button button--secondary" type="button">Generate Link</button>
+            </div>
+            <div class="output" aria-live="polite">
+              <p id="status">Ready to share.</p>
+              <a id="share-link" href="#" target="_blank" rel="noopener"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-to-use">
+        <div class="container">
+          <h2>How to use ShareText</h2>
+          <div class="steps">
+            <article class="card">
+              <span class="step-index">01</span>
+              <h3>Write your text</h3>
+              <p>Draft your message in the editor with no distractions and full readability.</p>
+            </article>
+            <article class="card">
+              <span class="step-index">02</span>
+              <h3>Copy or generate link</h3>
+              <p>Click <strong>Copy Text</strong> for instant sharing or create a URL-safe preview link.</p>
+            </article>
+            <article class="card">
+              <span class="step-index">03</span>
+              <h3>Share anywhere</h3>
+              <p>Paste in chat apps, docs, email, or social platforms to collaborate faster.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Is ShareText free to use?</summary>
+              <p>Yes. This demo version is fully free and designed for quick sharing and prototyping.</p>
+            </details>
+            <details>
+              <summary>Does this store my text on a server?</summary>
+              <p>No server storage is used in this front-end demo. Your text stays in your browser session.</p>
+            </details>
+            <details>
+              <summary>Can I share long messages?</summary>
+              <p>Yes, but very long text can produce long URLs. Use copy-to-clipboard for best reliability.</p>
+            </details>
+            <details>
+              <summary>Can I customize branding and colors?</summary>
+              <p>Absolutely. The styles are modular so you can quickly adapt the theme for your brand.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p>© <span id="year"></span> ShareText. Crafted for seamless communication.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
